@@ -1,0 +1,288 @@
+/* ==========================================================================
+   EXECUTIVE ANNOUNCEMENT & HOLOGRAM THEME
+   ========================================================================== */
+
+:root {
+    --bg-dark: #050711;
+    --card-bg: rgba(18, 22, 43, 0.85);
+    --border-cyan: rgba(0, 240, 255, 0.25);
+    --neon-cyan: #00f0ff;
+    --neon-gold: #ffd700;
+    --neon-purple: #a855f7;
+    --text-slate: #94a3b8;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg-dark);
+    color: #ffffff;
+    font-family: 'Rajdhani', 'Hanuman', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--border-cyan);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo-icon {
+    background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
+    color: #000;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 900;
+    font-size: 1.2rem;
+    padding: 10px 14px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px var(--neon-cyan);
+}
+
+.logo-text h1 {
+    font-size: 1.3rem;
+    color: #ffffff;
+}
+
+.logo-text span {
+    font-size: 0.85rem;
+    color: var(--neon-cyan);
+}
+
+/* Language & Voice Switches */
+.header-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.lang-switch button, .btn-voice {
+    background: rgba(0, 240, 255, 0.1);
+    border: 1px solid var(--neon-cyan);
+    color: var(--neon-cyan);
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.lang-switch button.active, .lang-switch button:hover, .btn-voice:hover {
+    background: var(--neon-cyan);
+    color: #000;
+    box-shadow: 0 0 12px var(--neon-cyan);
+}
+
+/* Layout Containers */
+.container {
+    width: 100%;
+    max-width: 1100px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Hero Section */
+.hero-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-cyan);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(255, 215, 0, 0.1);
+    border: 1px solid var(--neon-gold);
+    color: var(--neon-gold);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.hero-card h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px var(--neon-cyan);
+}
+
+.hero-desc {
+    color: var(--text-slate);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Grid Layout */
+.executive-section h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--neon-gold);
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--neon-cyan);
+}
+
+.card-role {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--neon-cyan);
+    text-transform: uppercase;
+}
+
+.card h4 {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.card p {
+    color: var(--text-slate);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.highlight-card {
+    border-color: var(--neon-gold);
+    background: rgba(255, 215, 0, 0.05);
+}
+
+.cyber-card {
+    border-color: var(--neon-purple);
+    background: rgba(168, 85, 247, 0.05);
+}
+
+/* Hologram Section */
+.hologram-section {
+    background: radial-gradient(circle at center, rgba(0, 240, 255, 0.1) 0%, rgba(5, 7, 17, 0.95) 100%);
+    border: 1.5px solid var(--neon-cyan);
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.2);
+}
+
+.hologram-display {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+    perspective: 600px;
+}
+
+.hologram-cube {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotateCube 10s infinite linear;
+}
+
+.cube-face {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 2px solid var(--neon-cyan);
+    background: rgba(0, 240, 255, 0.15);
+    color: var(--neon-cyan);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: inset 0 0 15px var(--neon-cyan);
+}
+
+.cube-face:nth-child(1) { transform: rotateY(0deg) translateZ(60px); }
+.cube-face:nth-child(2) { transform: rotateY(90deg) translateZ(60px); }
+.cube-face:nth-child(3) { transform: rotateY(180deg) translateZ(60px); }
+.cube-face:nth-child(4) { transform: rotateY(-90deg) translateZ(60px); }
+
+@keyframes rotateCube {
+    from { transform: rotateX(15deg) rotateY(0deg); }
+    to { transform: rotateX(15deg) rotateY(360deg); }
+}
+
+.hologram-info {
+    flex: 2;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tech-badge {
+    color: var(--neon-cyan);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+}
+
+.hologram-info h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.hologram-info p {
+    color: var(--text-slate);
+    line-height: 1.7;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    color: var(--text-slate);
+    font-size: 0.85rem;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar { flex-direction: column; gap: 15px; }
+    .hero-card h2 { font-size: 1.5rem; }
+    .hologram-section { padding: 20px; }
+}
